@@ -9,10 +9,11 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let pais of paises">
+        <tr *ngFor="let pais of paises"
+             class="animate__animated animate__fadeIn animate__faster">
             <td>{{pais.cca3}}</td>
             <td> <img src="{{pais.flags.png}}"  class="small-flag"></td>
-            <td>{{pais.name.common}}</td>
+            <td>{{pais.capital}}, {{pais.name.common}}</td>
 
             <td>{{pais.population | number}}</td>
             <td>

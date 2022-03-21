@@ -15,7 +15,7 @@ export interface Country {
     region:       string;
     subregion:    string;
     languages:    Languages;
-    translations: { [key: string]: Translation };
+    translations:  translations ;
     latlng:       number[];
     landlocked:   boolean;
     borders:      string[];
@@ -95,14 +95,41 @@ export interface Name {
 }
 
 export interface NativeName {
-    grn: Translation;
-    spa: Translation;
+    grn: translations;
+    spa: translations;
 }
 
-export interface Translation {
-    official: string;
-    common:   string;
+export interface translations {
+    ara: TranslationType;
+ces:TranslationType;
+cym:TranslationType;
+deu:TranslationType;
+est:TranslationType;
+fin:TranslationType;
+fra:TranslationType;
+hrv:TranslationType;
+hun:TranslationType;
+ita:TranslationType;
+jpn:TranslationType;
+kor:TranslationType;
+nld:TranslationType;
+per:TranslationType;
+pol:TranslationType;
+por:TranslationType;
+rus:TranslationType;
+slk:TranslationType;
+spa:TranslationType;
+swe:TranslationType;
+urd:TranslationType;
+zho:TranslationType;
+
 }
+export interface TranslationType {
+    official: string;
+    common: string;
+ 
+}
+
 
 export interface PostalCode {
     format: string;
